@@ -4,24 +4,28 @@
 {{/if_eq}}
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-{{#router}}
+
+{{#isEnabled plugins 'vue-router'}}
 import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-{{/router}}
-{{#vuex}}
+{{/isEnabled}}
+{{#isEnabled plugins 'vuex'}}
 import store from './store'
-{{/vuex}}
+{{/isEnabled}}
+{{#isEnabled plugins 'axios'}}
+Vue.http = Vue.prototype.$http = axios
+{{/isEnabled}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  {{#router}}
+  {{#isEnabled plugins 'vue-router'}}
   router,
-  {{/router}}
-  {{#vuex}}
+  {{/isEnabled}}
+  {{#isEnabled plugins 'vuex'}}
   store,
-  {{/vuex}}
+  {{/isEnabled}}
   {{#if_eq build "runtime"}}
   render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   {{/if_eq}}
