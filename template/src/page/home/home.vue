@@ -1,7 +1,9 @@
 <template>
     <div class="page-home">
       <hello></hello>
-      <p>welcome back</p>
+      <p>
+        <a href="https://github.com/vuejs-templates" target="_blank">built yourself template , click it</a>
+      </p>
     </div>
 </template>
 
