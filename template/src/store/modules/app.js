@@ -1,22 +1,16 @@
 let state = {
-  height: document.documentElement.scrollHeight + 'px',
-  total: 1,
-  list: [],
-
+  example: document.documentElement.scrollHeight + 'px',
+  total: 0
+  
 };
 
 let getters = {};
 
 let mutations = {
-  height: state => state.height = document.documentElement.scrollHeight + 'px',
-  totalChange (state, total) {
+  example: state => state.example = document.documentElement.scrollHeight + 'px',
+  Change (state, total) {
     state.total = total
   },
-  listChange (state, list) {
-    state.list = list
-  },
-
-
 };
 
 let actions = {};
