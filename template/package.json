@@ -16,12 +16,12 @@
       "dependencies": {
       "vue": "^2.5.2",
       {{#axios}}
-      "axios": "^0.16.2",
+      "axios": "^0.17.0",
       {{/axios}}
       {{#router}}
       "vue-router": "^3.0.1"
       {{/router}}{{#vuex}}
-      "vuex": "^2.4.1"
+      "vuex": "^3.0.1"
       {{/vuex}}
       },
       "devDependencies": {
