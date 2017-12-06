@@ -30,8 +30,7 @@
 "axios": "^0.17.0",
 {{/axios}}
 {{#router}}
-"vue-router": "^3.0.1",
-{{/router}}{{#vuex}}
+"vue-router": "^3.0.1"{{/router}}{{#vuex}},
 "vuex": "^3.0.1"
 {{/vuex}}
   },
