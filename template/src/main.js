@@ -15,22 +15,23 @@ import axios from 'axios'
 Vue.http = Vue.prototype.$http = axios
 {{/axios}}
 
+
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
 {{#router}}
-router,
-  {{/router}}
+  router,
+    {{/router}}
 {{#vuex}}
-store,
+  store,
   {{/vuex}}
 {{#if_eq build "runtime"}}
-render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 {{/if_eq}}
 {{#if_eq build "standalone"}}
-template: '<App/>',
+  template: '<App/>',
   components: { App }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 {{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
