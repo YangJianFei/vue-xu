@@ -12,7 +12,7 @@ import store from './store'
 {{/vuex}}
 {{#axios}}
 import axios from 'axios'
-Vue.http = Vue.prototype.$http = axios
+Vue.$http = Vue.prototype.$http = axios
 {{/axios}}
 
 
